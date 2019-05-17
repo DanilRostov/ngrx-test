@@ -17,9 +17,9 @@ export class StoryScreenComponent implements OnInit, OnDestroy {
   ) { }
 
   public ngOnInit() {
-    this.subscriptions.add(this.store.pipe(select(getStories)).subscribe((stories) => {
-      this.stories = stories;
-    }));
+    // this.subscriptions.add(this.store.pipe(select(getStories)).subscribe((stories) => {
+    //   this.stories = stories;
+    // }));
   }
 
   public ngOnDestroy(): void {

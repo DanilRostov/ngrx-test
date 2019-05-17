@@ -1,23 +1,22 @@
 import * as StoryActions from '../actions/story-actions';
 import { Story } from '../models/story-models';
-import { createSelector } from '@ngrx/store';
 
-export interface StoriesState {
+export interface TripsState {
   data: Story[];
   loading: boolean;
   error: string;
 }
 
-export const initialStoriesState: StoriesState = {
+export const initialTripsState: TripsState = {
   data: [],
   loading: false,
   error: '',
 };
 
-export function storyReducer(
-  state = initialStoriesState,
+export function tripsReducer(
+  state = initialTripsState,
   action: StoryActions.ActionsUnion
-): StoriesState {
+): TripsState {
   switch (action.type) {
     case StoryActions.StoryActionTypes.LoadStories: {
       return {

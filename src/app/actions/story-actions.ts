@@ -13,13 +13,13 @@ export class LoadStories implements Action {
 
   constructor(public payload: Story[]) {}
 }
- 
+
 export class CreateStory implements Action {
   readonly type = StoryActionTypes.CreateStory;
 
   constructor(public payload: Story) {}
 }
- 
+
 export class UpdateStory implements Action {
   readonly type = StoryActionTypes.UpdateStory;
 
@@ -32,7 +32,7 @@ export class DeleteStory implements Action {
   constructor(public payload: Story[]) {}
 }
 
-export type ActionsUnion = 
+export type ActionsUnion =
   | LoadStories
   | CreateStory
   | UpdateStory

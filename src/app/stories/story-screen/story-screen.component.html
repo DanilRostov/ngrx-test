@@ -1,7 +1,7 @@
 <div>
   <h2>Manage your stories</h2>
   <div>
-    <ng-container *ngFor="story of stories">
+    <ng-container *ngFor="let story of stories">
       <h3>{{ story.title }}</h3>
       <p>{{ story.text }}</p>
       <button (click)="deleteStory(story)">delete this story</button>

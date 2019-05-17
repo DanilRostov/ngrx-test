@@ -8,18 +8,20 @@ import { counterReducer } from './reducers/counter-reducer';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
-import { StoryScreenComponent } from './components/story-screen/story-screen.component';
+import { RootPageComponent } from './components/root-page/root-page.component';
+import { StoriesModule } from './stories/stories.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    StoryScreenComponent,
+    RootPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ count: counterReducer }),
+    StoriesModule,
+    StoreModule.forRoot({ counter: counterReducer }),
     StoreDevtoolsModule.instrument(),
   ],
   providers: [],
